@@ -54,7 +54,35 @@ if (Test-Path $wtPath) {
     Write-Warn "Windows Terminal nao encontrado em $wtPath. Instale pelo site ou Microsoft Store primeiro."
 }
 
-# ---------- 6. Aviso: Nerd Font ----------
+# ---------- 6. Restaurar .claude ----------
+Write-Step "Restaurando configuracoes do Claude Code..."
+$claudeDest = "$HOME\.claude"
+if (-not (Test-Path $claudeDest)) { New-Item -ItemType Directory -Force $claudeDest | Out-Null }
+
+Copy-Item "$scriptDir\claude\CLAUDE.md"             "$claudeDest\CLAUDE.md"             -Force
+Copy-Item "$scriptDir\claude\settings.json"          "$claudeDest\settings.json"          -Force
+Copy-Item "$scriptDir\claude\brain-session-end.sh"   "$claudeDest\brain-session-end.sh"   -Force
+Copy-Item "$scriptDir\claude\brain-session-start.sh" "$claudeDest\brain-session-start.sh" -Force
+
+New-Item -ItemType Directory -Force "$claudeDest\commands" | Out-Null
+Copy-Item "$scriptDir\claude\commands\*" "$claudeDest\commands\" -Recurse -Force
+
+New-Item -ItemType Directory -Force "$claudeDest\hooks" | Out-Null
+Copy-Item "$scriptDir\claude\hooks\*" "$claudeDest\hooks\" -Recurse -Force
+
+Write-OK "Claude Code configurado"
+
+# ---------- 7. Restaurar .agents ----------
+Write-Step "Restaurando skills do agente..."
+$agentsDest = "$HOME\.agents"
+New-Item -ItemType Directory -Force "$agentsDest\skills" | Out-Null
+
+Copy-Item "$scriptDir\agents\skills\*" "$agentsDest\skills\" -Recurse -Force
+Copy-Item "$scriptDir\agents\.skill-lock.json" "$agentsDest\.skill-lock.json" -Force
+
+Write-OK "Skills restauradas"
+
+# ---------- 8. Aviso: Nerd Font ----------
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Magenta
 Write-Host " PASSO MANUAL NECESSARIO: Instalar Nerd Font" -ForegroundColor Magenta

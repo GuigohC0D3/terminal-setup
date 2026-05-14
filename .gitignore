@@ -1,0 +1,12 @@
+# Nunca commitar credenciais
+.credentials.json
+*.credentials.*
+**/secrets.*
+**/.env
+
+# Runtime do Claude Code
+history.jsonl
+session-history.md
+paste-cache/
+sessions/
+cache/

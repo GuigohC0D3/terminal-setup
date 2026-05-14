@@ -1,0 +1,68 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-04-29T01:54:40.299Z",
+      "updatedAt": "2026-04-29T01:54:40.299Z"
+    },
+    "senior-frontend": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/davila7/claude-code-templates.git",
+      "skillPath": "cli-tool/components/skills/development/senior-frontend/SKILL.md",
+      "skillFolderHash": "9c17ed7740d01fc2471c10eab9985891e65c66b0",
+      "installedAt": "2026-04-30T01:29:49.376Z",
+      "updatedAt": "2026-04-30T01:29:49.376Z"
+    },
+    "senior-backend": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/davila7/claude-code-templates.git",
+      "skillPath": "cli-tool/components/skills/development/senior-backend/SKILL.md",
+      "skillFolderHash": "f1b4a87593b51900bd231ef28da1d82c83112f3e",
+      "installedAt": "2026-04-30T01:30:17.616Z",
+      "updatedAt": "2026-04-30T01:30:17.616Z"
+    },
+    "senior-architect": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillPath": "skills/senior-architect/SKILL.md",
+      "skillFolderHash": "a193dddb4aec767e86a2b7c1bd32bf8791998409",
+      "installedAt": "2026-04-30T01:31:16.969Z",
+      "updatedAt": "2026-04-30T01:31:16.969Z"
+    },
+    "token-efficiency": {
+      "source": "delphine-l/claude_global",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/delphine-l/claude_global.git",
+      "skillPath": "skills/claude-meta/token-efficiency/SKILL.md",
+      "skillFolderHash": "dd8f1499e267378f338475328a22a44a3d48a1f1",
+      "installedAt": "2026-04-30T01:37:04.591Z",
+      "updatedAt": "2026-04-30T01:37:04.591Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "dexto",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}
